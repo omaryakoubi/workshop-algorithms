@@ -1,0 +1,53 @@
+ALGORITHM ALGO_CHECKPOINT_LINEAR_DATA_STUCTURE
+VAR
+set1 : ARRAY_OF INTERGER[5]
+set2 : ARRAY_OF INTERGER[5]
+set3 : ARRAY_OF INTERGER[5]
+set4 : ARRAY_OF INTERGER[5]
+set5, set, i, j, x, k, m, n : INTERGER;
+number, number2: INTERGER;
+
+BEGIN
+set1 := {3,1,7,9};
+set2 := {2,4,1,9,3};
+FOR i FROM 0 TO set1.length STEP 1 DO
+    number := 0;
+    FOR j FROM 0 TO set2.length STEP 1 DO
+        IF(set1[i] = set2[j]) THEN
+            number : =1
+            break;
+        END_IF
+        IF (number = 0) THEN
+            set := set + set1[i];
+        END_IF
+    END_FOR
+END_FOR
+
+FOR x FROM 0 TO set2.lengh STEP 1 DO
+    number2 := 0;
+    FOR k FROM 0 TO set1.lengh STEP 1 DO
+        IF(set2[x] = set1[k]) THEN
+            number2 := 1
+            break;
+        END_IF
+        IF (number2 = 0) THEN
+            set := set + set1[x];
+        END_IF
+    END_FOR
+END_FOR
+
+//2
+set3 := {12, 13, 6, 10};
+set4 := {13, 10, 16, 15};
+    FOR m FROM 0 TO set3.length STEP 1 DO
+        FOR n FROM 0 TO set4.lengh STEP 1 DO
+            IF (set3[m] = set4[n]) THEN
+                set5 := set5 + (set3[m]*2);
+            END_IF
+        END_FOR
+    END_FOR
+
+write('Final result problem 1 : ', set)
+write('Final result problem 2 : ', set5)         
+
+        
